@@ -1,0 +1,14 @@
+out - outputs something - done
+vs - string variable - done
+vi - integer variable - done
+in - input with text - done
+add - add things
+sub - subtract things
+mul - multiply things
+div - divide things
+cv - check if a variable exists
+if - if statement (runs command if true)
+eif - ends the if statement
+pkg - adds a package (python files with the extension .cpkg)
+loop - loops the code after
+eloop - ends the loop code
