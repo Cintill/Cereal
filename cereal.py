@@ -1,4 +1,4 @@
-#  Cereal Compiler v1
+#  Cereal Compiler & Executor v0.1-beta
 #  Copyright (C) 2022 Cintill Inc.
 #
 #  This program is free software: you can redistribute it and/or modify
@@ -12,6 +12,7 @@
 import sys
 
 def run(filename, devmode):
+  commandsComingSoon = ["add", "sub", "mul", "div", "cv", "if", "eif", "pkg", "loop", "eloop"]
   vars = {}
   def varout(var):
     try:
@@ -62,6 +63,9 @@ def run(filename, devmode):
         inp = input(text)
         varin(args[0], inp)
       else:
+        if line[0] in commandsComingSoon:
+          print("Error: Command coming soon: "+line[0])
+          sys.exit(1)
         print("Error: Unknown command: "+line[0])
         sys.exit(1)
     if devmode == "--devmode" or devmode == "-d":
